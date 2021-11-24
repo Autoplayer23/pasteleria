@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>{{titulo}}</h1>
+    
+      <button class="btn-info" type="button" [routerLink]="['/pastel/form']">Nuevo pastel</button>
+      <br><br><br>
+      <table class="table table-success table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre del pastel</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Peso</th>
+            <th scope="col">Fecha de solicitud</th>
+            <th scope="col">Fecha de entrega</th>
+            <th scope="col">Solicitante</th>
+            <th scope="col">Empleado</th>
+            <th scope="col">Notas</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= " let pastel of pasteles">
+            <th scope="row">{{pastel.id}}</th>
+            <td>{{pastel.nombre_pastel}}</td>
+            <td>{{pastel.tipo}}</td>
+            <td>{{pastel.peso}} kg</td>
+            <td>{{pastel.fecha_Solicitud}}</td>
+            <td>{{pastel.fecha_Entrega}}</td>
+            <td>{{pastel.solicitante}}</td>
+            <td>{{pastel.empleado}}</td>
+            <td>{{pastel.notas}}</td>
+            <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['/pastel/form',pastel.id]">Editar</button></td>
+            <td><button  class="btn btn-danger" (click)="delete(pastel)">Eliminar</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>

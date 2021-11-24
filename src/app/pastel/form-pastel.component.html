@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="card-body">
+        <h3 class="card-title">{{titulo}}</h3>
+        <form >
+            <div class="form-group row">
+                <label for="parte" class="col-from-label col-sm-2"><h5>Nombre de pastel</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="Nombre Pastel" [(ngModel)]="pastel.nombre_pastel">
+                </div>
+            </div>
+            <br><br><br>
+            <div class="form-group row">
+                <label for="nombre demonio" class="col-from-label col-sm-2"><h5>tipo</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="tipo" [(ngModel)]="pastel.tipo">
+                </div>
+            </div>
+            <br><br><br>
+            <div class="form-group row">
+                <label for="resultado batalla" class="col-from-label col-sm-2"><h5>peso</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="peso" [(ngModel)]="pastel.peso">
+                </div>
+            </div>
+
+            <br><br><br>
+            <div class="form-group row">
+                <label for="resultado batalla" class="col-from-label col-sm-2"><h5>fecha de solicitud</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="fecha Solicitud" [(ngModel)]="pastel.fecha_Solicitud">
+                </div>
+            </div>
+
+            <br><br><br>
+            <div class="form-group row">
+                <label for="resultado batalla" class="col-from-label col-sm-2"><h5>fecha de entrega</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="fecha Entrega" [(ngModel)]="pastel.fecha_Entrega">
+                </div>
+            </div>
+
+            <br><br><br>
+            <div class="form-group row">
+                <label for="resultado batalla" class="col-from-label col-sm-2"><h5>solicitante</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="solicitante" [(ngModel)]="pastel.solicitante">
+                </div>
+            </div>
+           
+            <br><br><br>
+            <div class="form-group row">
+                <label for="resultado batalla" class="col-from-label col-sm-2"><h5>empleado</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="empleado" [(ngModel)]="pastel.empleado">
+                </div>
+            </div>
+
+            <br><br><br>
+            <div class="form-group row">
+                <label for="resultado batalla" class="col-from-label col-sm-2"><h5>notas</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="notas" [(ngModel)]="pastel.notas">
+                </div>
+            </div>
+            <br><br><br>
+            <button class="btn btn-success" role="button" (click)='create()' *ngIf= "router.url=='/pastel/form' else elseBlock">Registrar</button>
+            <ng-template #elseBlock >
+                <button class="btn btn-success" role="button" (click)='update()'>Actualizar</button>
+            </ng-template>
+            
+        </form>
+    </div>
+</div>
+
